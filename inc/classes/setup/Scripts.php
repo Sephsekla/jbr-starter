@@ -1,10 +1,10 @@
 <?php
-/*
+/**
  * Scripts
  *
  * @package fercor
  * @since 0.1.0
- */
+ **/
 
 namespace fercor\setup;
 
@@ -20,14 +20,7 @@ class Scripts {
 
 		wp_enqueue_style( 'fercor-styles' );
 
-		wp_register_script( 'fercor-scripts', get_template_directory_uri() . '/dist/main.js', array( 'jquery','googlemaps' ), filemtime( get_template_directory() . '/dist/main.js' ), true );
-
-		wp_localize_script( 'fercor-scripts', 'ajaxData',
-			array(
-				'ajaxUrl'  => admin_url( 'admin-ajax.php' ),
-				'security' => wp_create_nonce( 'ff_security_nonce' )
-			)
-		);
+		wp_register_script( 'fercor-scripts', get_template_directory_uri() . '/dist/main.js', array( 'jquery' ), filemtime( get_template_directory() . '/dist/main.js' ), true );
 
 		wp_enqueue_script( 'fercor-scripts' );
 

@@ -7,8 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package fercor
- * */
-
+ **/
 
 ?>
 <!doctype html>
@@ -59,4 +58,3 @@
 
 
 		<div id="content" class="site-content">
-		
