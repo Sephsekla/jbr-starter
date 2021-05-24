@@ -1,0 +1,1 @@
+echo "Creating"; grep -rl '|_NAME_|' ./ | LC_ALL=C xargs sed -i '' 's/|_NAME_|/bar/g';
