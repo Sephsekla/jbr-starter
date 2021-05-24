@@ -11,17 +11,16 @@ const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const CriticalCSSPlugin = require('critical-css-webpack-plugin');
 
 
-const sassLoaders = [
-  {
+const sassLoaders = [{
     loader: 'css-loader',
     options: {
       url: false,
       sourceMap: true
 
     }
-    },
+  },
 
-    {
+  {
     loader: 'postcss-loader',
     options: {
       postcssOptions: {
@@ -29,16 +28,16 @@ const sassLoaders = [
       },
       sourceMap: true
     }
-    },
+  },
 
-    {
+  {
     loader: "sass-loader",
     options: {
       sourceMap: true,
       implementation: require("node-sass")
     }
 
-    }
+  }
 ];
 
 
@@ -61,7 +60,7 @@ module.exports = {
       warnings: true,
       publicPath: false
     }
-   },
+  },
 
 
   resolve: {
@@ -74,18 +73,17 @@ module.exports = {
   entry: {
 
     'main': './src/index.js',
-    'post': './src/post.js',
-    'home': './src/homepage.js',
-    'wid': './src/wid.js',
-    'about': './src/about.js',
-    '404': './src/404.js',
-   'main.min': './src/sass/style.scss'
+    'blocks': './src/blocks.js',
+    'main.min': './src/sass/style.scss',
+    'editor.min': './src/sass/editor/scss'
 
   },
   plugins: [
     new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
-      filename: ({ chunk }) => `${chunk.name}.css`,
+      filename: ({
+        chunk
+      }) => `${chunk.name}.css`,
     }),
     new CriticalCSSPlugin({
       src: 'https://jbr.digital/?generate-critical=true',
@@ -110,7 +108,7 @@ module.exports = {
   },
   module: {
     rules: [
-      
+
       /* JS Files */
       {
         test: /\.js$/,
@@ -118,8 +116,7 @@ module.exports = {
         use: [{
           loader: 'babel-loader',
           options: {
-            presets: 
-              ['@wordpress/babel-preset-default'],
+            presets: ['@wordpress/babel-preset-default'],
             plugins: ["lodash"],
             sourceType: "unambiguous",
           }
@@ -159,7 +156,7 @@ module.exports = {
             options: {
               url: false,
               sourceMap: true
-        
+
             }
           }
         ]
