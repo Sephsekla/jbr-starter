@@ -1,22 +1,6 @@
 $colors: (
 
-	dark: $dark,
-	med: $med,
-	medlight: $medlight,
-	light: $light,
-	
-	dblue: $dblue,
-	blue: $blue,
-	blue-vibrant: $blue-vibrant,
-	aqua: $aqua,
-	aqua-t: $aqua-t,
-	green: $green,
-	green2: $green2,
-	cherry: $cherry,
-	cherry-t: $cherry-t,
-	red: $red,
-	orange: $orange,
-	white: $white,
+
 );
 
 @each $name, $color in $colors {
