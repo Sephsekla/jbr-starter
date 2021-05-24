@@ -1,0 +1,168 @@
+.site-header{
+	background-color: $white;
+
+	@import 'top';
+
+
+	&-main{
+		padding: 0 0 8px 0;
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+
+		.nav-toggle-wrapper{
+			width: 50%;
+		}
+
+		.logo-wrapper{
+			width: 50%;
+		}
+
+		.main-nav-wrapper{
+			width: 100%;
+		}
+	}
+
+	@media(min-width: $lg){
+		padding-top: 52px;
+		padding-bottom: 22px;
+		background-color: transparent;
+		transition: 0.2s;
+		position: fixed;
+		z-index: 50;
+		left: 0;
+		width: 100%;
+
+		&.scrolled{
+			background-color: $blue-dark;
+			padding-top: 18px;
+		}
+
+		&-main{
+			flex-wrap: nowrap;
+			padding-bottom: 0;
+			.logo-wrapper{
+				max-width: 277px;
+				min-width: 277px;
+				margin-right: 20px;
+				margin-left: -12px;
+			}
+			.main-nav-wrapper{
+				width: 100%;
+				margin-right: 5px;
+				max-width: 763px;
+			}
+		}
+
+	}
+
+
+	@media(min-width: $xl){
+		&-main{
+			flex-wrap: nowrap;
+			.logo-wrapper{
+				margin-right: 57px;
+			}
+			.main-nav-wrapper{
+				width: 100%;
+			}
+		}
+
+		
+
+		
+	}
+}
+
+
+.nav-toggle-wrapper{
+	width: 100%;
+	text-align: right;
+
+	@media(min-width: $lg){
+		display: none;
+	}
+}
+
+@import 'button';
+@import 'logo';
+
+.main-nav{
+	display: none;
+
+	ul{
+		margin-left: 0;
+		padding-left: 7px;
+
+		li{
+			list-style: none;
+			font-size: 1.3rem;
+			padding: $spacing_m 0;
+			border-bottom: 1px solid $medlight;
+			a{
+				text-decoration: none;
+				font-weight: 900;
+				color: $dark;
+				
+			}
+		}
+	}
+
+	@media(min-width: $lg){
+		display: block !important;
+		background-color: $white;
+		border-radius: $radius;
+		padding: 11px 32px 11px 25px;
+
+		ul{
+			margin: 0;
+			list-style: none;
+			text-align: right;
+			padding-left: 0;
+			display: flex;
+			justify-content: space-between;
+			li{
+				display: inline-block;
+				white-space: nowrap;
+				font-size: 0.6rem;
+				line-height: 1;
+				padding: 0;
+				border-bottom: 0;
+
+				a{
+					padding: 7px 9px;
+					border-radius: 8px;
+					display: block;
+
+					&:hover{
+						color: $cherry;
+					}
+				}
+
+				&.current-menu-item{
+					a{
+						background-color: $blue;
+						color: $white;
+
+						&:hover{
+							color: $white;
+							background-color: $cherry;
+						}
+					}
+				}
+
+				
+			}
+		}
+	}
+	@media(min-width: $lg){
+		ul li{
+			font-size: 0.8rem;
+			line-height: 1.3;
+			a{
+				padding: 14px 18px;
+
+			}
+		}
+	}
+}

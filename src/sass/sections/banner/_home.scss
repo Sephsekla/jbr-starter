@@ -1,0 +1,114 @@
+&-home {
+  padding-left: 34%;
+  background-image: url('./assets/banner-home.jpg');
+  background-position: 76% bottom;
+  background-size: 115%;
+
+
+  .container {
+    padding-left: 0;
+    padding-right: 8px;
+  }
+
+  @media(min-width: $md){
+    .banner-content{
+      padding-right: 0;
+    }
+  }
+
+  @media(min-width: $lg) {
+    padding-bottom: $spacing_l;
+    background-size: cover;
+    padding-left: 36%;
+
+    .container {
+      padding-left: 15px;
+    }
+
+  }
+
+  @media(min-width: $xl) {
+    padding-top: 336px;
+    padding-bottom: $spacing_xl;
+    background-position: left bottom;
+
+
+
+  }
+
+
+  .tagline {
+    &-1 {
+      color: $aqua;
+      text-transform: uppercase;
+      font-family: $font-condensed;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.5px;
+
+      @media(min-width: $sm) {
+        font-size: 1.2rem;
+      }
+
+      @media(min-width: $md) {
+        font-size: 2.5rem;
+        
+      }
+
+    }
+
+    &-2 {
+
+      margin-top: 0;
+     
+      h1 {
+        font-size: 1.75rem;
+        line-height: 0.9;
+        display: block;
+        margin: $spacing_s 0;
+        margin: 0;
+
+        @media(min-width: $sm) {
+          font-size: 2.5rem;
+        }
+
+        @media(min-width: $xl) {
+          font-size: 3rem;
+        }
+
+        @media(min-width: $xl) {
+          font-size: 4.85rem;
+          display: inline;
+          letter-spacing: -1px;
+        }
+      }
+
+      a {
+        color: $aqua;
+        text-transform: uppercase;
+        font-family: $font-main;
+        font-weight: 900;
+        font-size: 0.625rem;
+        text-decoration: none;
+
+        &:hover{
+          color: $cherry;
+        }
+
+        @media(min-width: $sm) {
+          font-size: 1.05rem;
+          margin-left: 6px;
+        }
+      }
+
+      @media(min-width: $md){
+        margin-top: 11px;
+      }
+    }
+  }
+
+  +section {
+    margin-top: 0;
+  }
+}

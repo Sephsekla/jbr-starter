@@ -1,0 +1,19 @@
+@mixin headline-line {
+  &::before {
+    content: "";
+    display: block;
+    border-bottom: 5px solid;
+    border-color: inherit;
+    margin-bottom: 0.5*$spacing_s;
+    max-width: 35px;
+  }
+
+  @media(min-width: $lg) {
+    &::before {
+
+      border-bottom-width: 14px;
+      margin-bottom: $spacing_ml;
+      max-width: 140px;
+    }
+  }
+}

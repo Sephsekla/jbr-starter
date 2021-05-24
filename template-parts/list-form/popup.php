@@ -1,0 +1,7 @@
+<div id="terms-and-conditions" class="popup mfp-hide terms-and-conditions">
+		<div class="popup-body container-fluid">
+		<button title="Close (Esc)" type="button" class="mfp-close">×</button>
+		<h3>Registration Terms & Conditions</h3>
+		<p>By completing and submitting this form, I acknowledge that I am a US healthcare professional and I authorize Ferring to enter the information I have provided into a database. I agree that Ferring, its agents, subcontractors, affiliates, or third parties under contract with them may contact me from time to time by telephone, mail, or email to provide information about products or services that may be of interest to me. I have a right of access and verification to my personal information. I also have a right to opt out of the database at any time. Subject to the above, unless authorized by me, my personal information will not be sold or transferred to third parties, other than in the event of Ferring or its affiliates being sold. If you no longer wish to receive such communications from Ferring, you may “opt out” at any time by calling Ferring at 1-888-FERRING Monday through Friday, 8:00 a.m. to 7:00 p.m. EST to speak to a representative or leave a voicemail. This statement may be updated from time to time.</p>
+		</div>
+</div>

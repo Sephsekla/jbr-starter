@@ -1,0 +1,15 @@
+{
+    "name": "jbr/fercor",
+    "description": "A bespoke theme for Fercor",
+    "type": "project",
+    "license": "GPL2",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "fercor\\": "inc/classes" 
+        },
+        "files": [
+            "inc/helpers.php"
+        ]
+    }
+}

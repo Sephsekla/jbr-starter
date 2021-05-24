@@ -1,0 +1,165 @@
+.resources {
+
+  .container-padded {
+
+    padding-top: 24px;
+
+  }
+
+  h2 {
+    margin-top: 0;
+    font-weight: 900;
+    font-size: 1.25rem;
+    line-height: 1.125;
+    margin-bottom: 6px;
+
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+
+
+
+  @media(min-width: $md) {
+
+    .container-padded {
+      padding-top: 40px;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+    }
+
+  }
+
+  &-with-picture {
+    .container-padded {
+      display: flex;
+
+      @media(min-width: $md){
+        padding-top: 60px;
+      }
+
+
+      @media(min-width: $lg){
+        padding-right: 70px;
+        padding-bottom: 0;
+        
+      }
+
+
+      .resource-image {
+        display: none;
+        margin-right: 40px;
+        min-width: 145px;
+
+        img{
+          width: 100%;
+        }
+
+        @media(min-width: $md) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &-secondary {
+    padding-top: 98px;
+    margin-top: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      padding-bottom: 44px;
+
+      &:last-child{
+        padding-bottom: 0;
+      }
+    }
+
+    img {
+      width: 68%;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    h4 {
+      margin-top: $spacing_s;
+      margin-bottom: $spacing_s;
+      font-weight: 900;
+    }
+
+    p {
+      margin-top: 0;
+      font-size: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media(min-width: $lg) {
+      padding-top: 90px;
+
+      li {
+        padding-bottom: 125px;
+  
+        &:last-child{
+          padding-bottom: 0;
+        }
+      }
+
+      h4{
+        font-size: 1.6rem;
+      }
+
+      p:last-child{
+        margin-top: 0;
+      }
+    }
+  }
+
+
+  &.padbottom{
+    padding-bottom: 24px;
+  }
+
+
+}
+
+.savings{
+  padding-bottom: 24px;
+
+  @media(min-width: $md){
+    h2{
+      font-size: 1.6rem;
+    }
+
+    p{
+      font-size: 1rem;
+    }
+
+    .container-padded{
+      padding-right: 0;
+    }
+  }
+}
+
+.disclaimer{
+
+  @media(min-width: $lg){
+  padding-bottom: 0;
+
+  &.savings .container-padded{
+    padding-bottom: 40px;
+  }
+  }
+
+
+}

@@ -1,0 +1,15 @@
+.video{
+	&-embed{
+		height: 0;
+		padding-bottom: 56%;
+		position: relative;
+		overflow: hidden;
+		iframe{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+.banner{
+	background-color: $dblue;
+	background-image: url('./assets/banner-main.jpg');
+	background-size: cover;
+	background-position: bottom left;
+	min-height: 46vw;
+	display: flex;
+	align-items: center;
+
+	&-content{
+		color: $white;
+
+		h1, p{
+			display: inline;
+			font-size: 1.1rem;
+
+		}
+
+		h1{
+			font-weight: 900;
+		}
+
+		p{
+			font-family: serif;
+			font-weight: 400;
+		}
+	}
+
+	padding: $spacing_ml 0;
+
+	@media(min-width: $md){
+	    min-height: 400px;
+		h1, p{
+			font-size: 1.8rem;
+			line-height: 45px;
+
+		}
+
+		p{
+			font-size: 1.95rem;
+		}
+	}
+
+	@media(min-width: $lg){
+	  min-height: 640px;
+	  padding-top: 220px;
+		padding-bottom: 288px;
+
+		&-narrow{
+			padding-bottom: 250px;
+		}
+
+		&-content{
+			padding-right: 7%
+		}
+	}
+
+
+
+	@import 'home';
+}

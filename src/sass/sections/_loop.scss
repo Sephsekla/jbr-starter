@@ -1,0 +1,39 @@
+.archive-loop {
+
+ 
+
+  .loop-item {
+    border-bottom: 1px solid #d8d8d8;
+
+    padding: $spacing_ml 0 $spacing_m 0;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0;
+      margin-bottom: $spacing_s;
+      font-size: 0.875rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .date {
+      font-weight: 700;
+      font-size: 0.875rem;
+      line-height: 1.2;
+    }
+
+	@media(min-width: $lg) {
+
+		padding: 45px 0 20px 0;
+
+		h2, .date, .section-columns-link{
+			font-size: 1rem;
+			line-height: 1.6;
+		}
+	  }
+  }
+}

@@ -1,0 +1,88 @@
+.updates {
+  background-color: $blue;
+  color: $white;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: $spacing_s 0;
+
+  .desktop {
+    display: none;
+    font-weight: 700;
+  }
+
+  .button{
+    text-transform: none;
+  }
+
+  &-container {
+
+    margin: auto auto;
+
+    .inner p {
+      &:first-child {
+        margin: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        margin-top: 5px;
+      }
+    }
+
+    .mob{
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    @media(min-width: $md) {
+
+      width: 80%;
+
+      .desktop {
+        display: inline;
+      }
+
+      .mob {
+        //display: none;
+        font-size: 1.2rem;
+      }
+
+      .button{
+        text-transform: uppercase;
+      }
+
+      padding: 40px 0;
+      text-align: left;
+
+      font-size: 1.2rem;
+      line-height: 1.4;
+
+      .inner {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          margin: 0;
+          display: block;
+
+          &:first-child {
+
+
+            margin-right: 42px;
+
+          }
+        }
+
+        .button {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  @import 'sticky';
+
+
+}

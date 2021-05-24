@@ -1,0 +1,48 @@
+.toggle-button{
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	appearance: none;
+	position: relative;
+	@include no-button;
+
+	.line{
+		width: 100%;
+		height: 3px;
+		border-bottom: 3px solid $dark;
+		left: 0;
+		transform-origin: center;
+		position: absolute;
+		transition: 0.2s;
+
+		&-1{
+			top: 0;
+		}
+		&-2, &-3{
+			top: 11px;
+		}
+		&-4{
+			bottom: 0;
+		}
+	}
+}
+
+.menu-active{
+	.toggle-button{
+		.line{
+			border-color: $blue;
+
+			&-1, &-4{
+				transform: scalex(0);
+			}
+
+			&-2{
+				transform: rotate(45deg) scalex(0.8);
+			}
+
+			&-3{
+				transform: rotate(-45deg) scalex(0.8);
+			}
+		}
+	}
+}
