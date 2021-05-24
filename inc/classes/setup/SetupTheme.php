@@ -3,10 +3,11 @@
  * Setup functions
  *
  * |_PACKAGE_|
+ *
  * @since 0.1.0
  **/
 
-namespace |_SLUG_|\setup;
+namespace | _SLUG_ | \setup;
 
 class SetupTheme {
 
@@ -65,6 +66,23 @@ class SetupTheme {
 
 		add_theme_support( 'widgets' );
 
+		add_theme_support( 'align-wide' );
+
+		// Adds support for editor color palette.
+		add_theme_support(
+			'editor-color-palette',
+			array( // Extend this array with our brand colours
+				array(
+					'name'  => 'Black',
+					'slug'  => 'black',
+					'color' => '#000000',
+				),
+			)
+		);
+
+		// Disables custom colors in block color palette.
+		add_theme_support( 'disable-custom-colors' );
+
 		add_image_size( 'square', 300, 300, true ); // (cropped)
 		add_image_size( 'featured', 700, 380, true ); // (cropped)
 
@@ -79,7 +97,7 @@ class SetupTheme {
 		$html = sprintf(
 			'<a href="%1$s" class="custom-logo-link" rel="home" itemprop="url">%2$s<span class="description">%3$s</span></a>',
 			esc_url( home_url( '/' ) ),
-			'<img src="' . |_SLUG_|_get_asset( 'logo.svg' ) . '" class="custom-logo"width="70" height="33">',
+			'<img src="' . | _SLUG_ | _get_asset( 'logo.svg' ) . '" class="custom-logo"width="70" height="33">',
 			esc_attr( get_bloginfo( 'description' ) )
 		);
 		return $html;
