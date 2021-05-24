@@ -28,25 +28,23 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'fercor' ); ?></a>
 
 		<header id="header-main" class="site-header">
-			<div class="container container-inner-xl">
-				<?php get_template_part( 'template-parts/header/top' ); ?>
-				<div class="site-header-main">
-					<div class="logo-wrapper"> <?php // 849 343 ?>
-							<?php the_custom_logo(); ?>
-					</div>
-					<div class="nav-toggle-wrapper">
-							<button class="toggle-nav toggle-button">
-								<span class="inner screen-reader-text">Menu</span>
-								<span class="line line-1"></span>
-								<span class="line line-2"></span>
-								<span class="line line-3"></span>
-								<span class="line line-4"></span>
-					</div>
-					<div class="main-nav-wrapper">
+			<div class="site-header-main">
+				<div class="logo-wrapper"> <?php // 849 343 ?>
+					<?php the_custom_logo(); ?>
+				</div>
+				<div class="nav-toggle-wrapper">
+					<button class="toggle-nav toggle-button">
+						<span class="inner screen-reader-text">Menu</span>
+						<span class="line line-1"></span>
+						<span class="line line-2"></span>
+						<span class="line line-3"></span>
+						<span class="line line-4"></span>
+				</div>
+				<div class="main-nav-wrapper">
 
-						
-						<nav class="main-nav" role="navigation" aria-expanded="false">
-							<?php
+
+					<nav class="main-nav" role="navigation" aria-expanded="false">
+						<?php
 							wp_nav_menu(
 								array(
 									'theme_location' => 'menu-1',
@@ -54,14 +52,11 @@
 								)
 							);
 							?>
-						</nav>
-					</div>
-
-
+					</nav>
 				</div>
-			</div>
 
 		</header><!-- #masthead -->
-	  
+
 
 		<div id="content" class="site-content">
+		
