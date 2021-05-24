@@ -2,7 +2,7 @@
 /**
  * Post content
  *
- * |_PACKAGE_|
+ * @package |_PACKAGE_|
  */
 
 ?>

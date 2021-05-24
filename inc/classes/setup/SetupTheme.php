@@ -2,7 +2,7 @@
 /**
  * Setup functions
  *
- * |_PACKAGE_|
+ * @package |_PACKAGE_|
  *
  * @since 0.1.0
  **/

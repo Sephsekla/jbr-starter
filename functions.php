@@ -2,7 +2,7 @@
 /**
  * Theme functions
  *
- * |_PACKAGE_|
+ * @package |_PACKAGE_|
  */
 
 new |_SLUG_|\setup\SetupTheme();
