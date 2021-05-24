@@ -2,11 +2,11 @@
 /**
  * Setup functions
  *
- * *_PACKAGE_*
+ * |_PACKAGE_|
  * @since 0.1.0
  **/
 
-namespace *_SLUG_*\setup;
+namespace |_SLUG_|\setup;
 
 class SetupTheme {
 
@@ -20,7 +20,7 @@ class SetupTheme {
 
 	public function init() {
 
-		load_theme_textdomain( '*_SLUG_*', get_template_directory() . '/languages' );
+		load_theme_textdomain( '|_SLUG_|', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -43,7 +43,7 @@ class SetupTheme {
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', '*_SLUG_*' ),
+				'menu-1' => esc_html__( 'Primary', '|_SLUG_|' ),
 
 			)
 		);
@@ -79,7 +79,7 @@ class SetupTheme {
 		$html = sprintf(
 			'<a href="%1$s" class="custom-logo-link" rel="home" itemprop="url">%2$s<span class="description">%3$s</span></a>',
 			esc_url( home_url( '/' ) ),
-			'<img src="' . *_SLUG_*_get_asset( 'logo.svg' ) . '" class="custom-logo"width="70" height="33">',
+			'<img src="' . |_SLUG_|_get_asset( 'logo.svg' ) . '" class="custom-logo"width="70" height="33">',
 			esc_attr( get_bloginfo( 'description' ) )
 		);
 		return $html;

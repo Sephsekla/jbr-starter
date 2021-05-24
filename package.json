@@ -1,57 +1,57 @@
 {
-		"name": "*_PACKAGE_*",
-		"version": "1.0.0",
-		"description": "",
-		"main": "index.js",
-		"scripts": {
-				"create": "echo \"Creating\"; sed -i '.bak' 's/*_NAME_*/Floop/g' *",
-				"test": "echo \"Error: no test specified\" && exit 1",
-				"build": "webpack --config webpack.dev.js",
-				"dev": "webpack --watch --config webpack.dev.js",
-				"buildprod": "webpack --config webpack.prod.js"
-		},
-		"author": "",
-		"license": "",
-		"dependencies": {
-			"normalize.css": "^8.0.1"
-		},
-		"devDependencies": {
-				"@babel/core": "^7.12.9",
-				"@babel/preset-env": "^7.12.7",
-				"@babel/runtime": "^7.12.5",
-				"@wordpress/babel-preset-default": "^5.2.1",
-				"@wordpress/element": "^2.18.0",
-				"@wordpress/scripts": "^14.1.1",
-				"autoprefixer": "^10.0.2",
-				"babel-loader": "^8.2.1",
-				"babel-plugin-lodash": "^3.3.4",
-				"babel-plugin-prismjs": "^2.0.1",
-				"babel-preset-env": "^1.7.0",
-				"classnames": "^2.2.6",
-				"concurrently": "^6.0.2",
-				"critical": "2.0.0",
-				"critical-css-webpack-plugin": "^2.0.1",
-				"css-loader": "^5.0.1",
-				"css-minimizer-webpack-plugin": "^2.0.0",
-				"file-loader": "^6.2.0",
-				"ifdef-loader": "^2.1.5",
-				"imports-loader": "^1.2.0",
-				"mini-css-extract-plugin": "^1.3.1",
-				"node-sass": "^5.0.0",
-				"normalize-path": "^3.0.0",
-				"postcss": "^8.2.1",
-				"postcss-loader": "^5.2.0",
-				"sass-loader": "^11.0.1",
-				"save": "^2.4.0",
-				"style-loader": "^2.0.0",
-				"webpack": "^5.33.2",
-				"webpack-cli": "^4.6.0",
-				"webpack-fix-style-only-entries": "^0.6.0",
-				"webpack-merge": "^5.4.0",
-				"webpack-shell-plugin": "^0.5.0",
-				"compass-mixins": "^0.12.10"
-				
-				
-				
-		}
+	"name": "|_PACKAGE_|",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+			"create": "echo \"Creating\"; sed -i '' 's/|_NAME_|/bar/g' style.css",
+			"test": "echo \"Error: no test specified\" && exit 1",
+			"build": "webpack --config webpack.dev.js",
+			"dev": "webpack --watch --config webpack.dev.js",
+			"buildprod": "webpack --config webpack.prod.js"
+	},
+	"author": "",
+	"license": "",
+	"dependencies": {
+		"normalize.css": "^8.0.1"
+	},
+	"devDependencies": {
+			"@babel/core": "^7.12.9",
+			"@babel/preset-env": "^7.12.7",
+			"@babel/runtime": "^7.12.5",
+			"@wordpress/babel-preset-default": "^5.2.1",
+			"@wordpress/element": "^2.18.0",
+			"@wordpress/scripts": "^14.1.1",
+			"autoprefixer": "^10.0.2",
+			"babel-loader": "^8.2.1",
+			"babel-plugin-lodash": "^3.3.4",
+			"babel-plugin-prismjs": "^2.0.1",
+			"babel-preset-env": "^1.7.0",
+			"classnames": "^2.2.6",
+			"concurrently": "^6.0.2",
+			"critical": "2.0.0",
+			"critical-css-webpack-plugin": "^2.0.1",
+			"css-loader": "^5.0.1",
+			"css-minimizer-webpack-plugin": "^2.0.0",
+			"file-loader": "^6.2.0",
+			"ifdef-loader": "^2.1.5",
+			"imports-loader": "^1.2.0",
+			"mini-css-extract-plugin": "^1.3.1",
+			"node-sass": "^5.0.0",
+			"normalize-path": "^3.0.0",
+			"postcss": "^8.2.1",
+			"postcss-loader": "^5.2.0",
+			"sass-loader": "^11.0.1",
+			"save": "^2.4.0",
+			"style-loader": "^2.0.0",
+			"webpack": "^5.33.2",
+			"webpack-cli": "^4.6.0",
+			"webpack-fix-style-only-entries": "^0.6.0",
+			"webpack-merge": "^5.4.0",
+			"webpack-shell-plugin": "^0.5.0",
+			"compass-mixins": "^0.12.10"
+			
+			
+			
+	}
 }

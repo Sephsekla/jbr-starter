@@ -1,3 +1,3 @@
-- `*_NAME_*`: Human-readable name for the theme
-- `*_PACKAGE_*`: Package name for composer and npm
-- `*_SLUG_*`: Theme Slug
+- `|_NAME_|`: Human-readable name for the theme
+- `|_PACKAGE_|`: Package name for composer and npm
+- `|_SLUG_|`: Theme Slug

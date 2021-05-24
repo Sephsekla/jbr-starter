@@ -2,8 +2,8 @@
 /**
  * Theme functions
  *
- * *_PACKAGE_*
+ * |_PACKAGE_|
  */
 
-new *_SLUG_*\setup\SetupTheme();
-new *_SLUG_*\setup\Scripts();
+new |_SLUG_|\setup\SetupTheme();
+new |_SLUG_|\setup\Scripts();

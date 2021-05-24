@@ -1,12 +1,12 @@
 {
-    "name": "*_PACKAGE_*",
-    "description": "A bespoke theme for *_NAME_*",
+    "name": "|_PACKAGE_|",
+    "description": "A bespoke theme for |_NAME_|",
     "type": "project",
     "license": "GPL2",
     "require": {},
     "autoload": {
         "psr-4": {
-            "*_SLUG_*\\": "inc/classes" 
+            "|_SLUG_|\\": "inc/classes" 
         },
         "files": [
             "inc/helpers.php"
