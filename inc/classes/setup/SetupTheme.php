@@ -1,10 +1,10 @@
 <?php
-/*
+/**
  * Setup functions
  *
  * @package fercor
  * @since 0.1.0
- */
+ **/
 
 namespace fercor\setup;
 
@@ -15,15 +15,6 @@ class SetupTheme {
 		add_action( 'after_setup_theme', array( $this, 'init' ) );
 
 		add_filter( 'get_custom_logo', array( $this, 'custom_logo' ) );
-
-		add_filter( 'gform_submit_button', array( $this, 'form_submit_button' ), 10, 2 );
-
-		add_action( 'wp_footer', array( $this, 'isi_modals' ) );
-
-		add_filter( 'gform_field_validation', array( $this, 'custom_validation' ), 10, 4 );
-		add_filter( 'body_class', array( $this, 'body_class' ), 10, 4 );
-
-
 
 	}
 
@@ -75,7 +66,6 @@ class SetupTheme {
 		add_theme_support( 'widgets' );
 
 		add_image_size( 'square', 300, 300, true ); // (cropped)
-
 		add_image_size( 'featured', 700, 380, true ); // (cropped)
 
 	}
@@ -96,103 +86,5 @@ class SetupTheme {
 	}
 
 
-	/**
-	 * Replace Gravity forms submit button with html5 button element
-	 *
-	 * @param  mixed $button
-	 * @param  mixed $form
-	 * @return void
-	 */
-	public function form_submit_button( $button, $form ) {
-		return "<button class='button gform_button' id='gform_submit_button_{$form['id']}'><span>Submit</span></button>";
-	}
-
-
-	function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
-		if ( $form['id'] == '1' ) {
-
-			ob_start();
-
-			?>
-<h2>Your Practice</h2>
-<div class="gform_body submission-display">
-	<ul class="gform_fields">
-		<li class="gfield">
-			<label class="gfield_label">Center/Practice Name</label>
-			<p><?php esc_attr_e( rgar( $entry, '2' ) ); ?></p>
-		</li>
-		<li class="gfield">
-			<label class="gfield_label">Physician(s)</label>
-			<p><?php esc_attr_e( rgar( $entry, '5' ) ); ?></p>
-		</li>
-		<li class="gfield">
-			<label class="gfield_label">Address Line 1</label>
-			<p><?php esc_attr_e( rgar( $entry, '4' ) ); ?></p>
-		</li>
-		<li class="gfield">
-			<label class="gfield_label">Address Line 2</label>
-			<p><?php esc_attr_e( rgar( $entry, '6' ) ); ?></p>
-		</li>
-		<li class="gfield">
-			<label class="gfield_label">City</label>
-			<p><?php esc_attr_e( rgar( $entry, '7' ) ); ?></p>
-		</li>
-		<li class="gfield half">
-			<label class="gfield_label">State/Province</label>
-			<p><?php esc_attr_e( rgar( $entry, '9' ) ); ?></p>
-		</li>
-		<li class="gfield half">
-			<label class="gfield_label">Postal Code</label>
-			<p><?php esc_attr_e( rgar( $entry, '10' ) ); ?></p>
-		</li>
-		<li class="gfield">
-			<label class="gfield_label">Phone</label>
-			<p><?php esc_attr_e( rgar( $entry, '11' ) ); ?></p>
-		</li>
-		<li class="gfield">
-			<label class="gfield_label">Email</label>
-			<p><?php esc_attr_e( rgar( $entry, '11' ) ); ?></p>
-		</li>
-	</ul>
-</div>
-
-			<?php
-
-			$confirmation = ob_get_clean();
-
-		}
-		return $confirmation;
-
-	}
-
-	public function isi_modals() {
-		get_template_part( 'template-parts/header/isi/menopur' );
-		get_template_part( 'template-parts/header/isi/ganirelix' );
-		get_template_part( 'template-parts/header/isi/novarel' );
-		get_template_part( 'template-parts/header/isi/invocell' );
-		get_template_part( 'template-parts/header/isi/endometrin' );
-	}
-
-	public function custom_validation( $result, $value, $form, $field ) {
-
-		if ( $field['isRequired'] && ( empty( $value ) || \GFCommon::is_empty_array( $value ) ) ) {
-
-			$result['message']  = '*Please complete required field';
-			$result['is_valid'] = false;
-
-		}
-
-		return $result;
-	}
-
-	function body_class( $classes ) {
-	    global $post;
-
-	    if ( $post->post_name ) {
-			return array_merge( $classes, array( 'ff-'.$post->post_name ) );
-		}
-
-	    return $classes;
-	}
 
 }
