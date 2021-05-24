@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-			"create": "create.sh",
+			"create": "bash create.sh",
 			"test": "echo \"Error: no test specified\" && exit 1",
 			"build": "webpack --config webpack.dev.js",
 			"dev": "webpack --watch --config webpack.dev.js",
