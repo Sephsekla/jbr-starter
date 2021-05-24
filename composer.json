@@ -2,7 +2,14 @@
     "name": "|_PACKAGE_|",
     "description": "A bespoke theme for |_NAME_|",
     "type": "project",
-    "license": "GPL2",
+    "license": "GPLV2",
+    "authors": [
+        {
+            "name": "Joe Bailey-Roberts",
+            "homepage": "https://jbr.digital",
+            "role": "Developer"
+        }
+    ],
     "require": {},
     "autoload": {
         "psr-4": {
