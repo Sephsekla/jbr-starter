@@ -2,8 +2,8 @@
 /**
  * Theme functions
  *
- * @package fercor
+ * *_PACKAGE_*
  */
 
-new fercor\setup\SetupTheme();
-new fercor\setup\Scripts();
+new *_SLUG_*\setup\SetupTheme();
+new *_SLUG_*\setup\Scripts();

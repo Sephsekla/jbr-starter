@@ -2,7 +2,7 @@
 /**
  * Post content
  *
- * @package fercor
+ * *_PACKAGE_*
  */
 
 ?>
