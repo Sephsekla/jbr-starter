@@ -10,8 +10,8 @@
 			"dev": "webpack --watch --config webpack.dev.js",
 			"buildprod": "webpack --config webpack.prod.js"
 	},
-	"author": "",
-	"license": "",
+	"author": "Joe Bailey-Roberts (https://jbr.digital)",
+	"license": "GPLV2",
 	"dependencies": {
 		"normalize.css": "^8.0.1"
 	},
