@@ -7,7 +7,7 @@
  * @since 0.1.0
  **/
 
-namespace | _SLUG_ | \setup;
+namespace |_SLUG_|\setup;
 
 class SetupTheme {
 
