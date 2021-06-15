@@ -97,7 +97,7 @@ class SetupTheme {
 		$html = sprintf(
 			'<a href="%1$s" class="custom-logo-link" rel="home" itemprop="url">%2$s<span class="description">%3$s</span></a>',
 			esc_url( home_url( '/' ) ),
-			'<img src="' . | _SLUG_ | _get_asset( 'logo.svg' ) . '" class="custom-logo"width="70" height="33">',
+			'<img src="' . |_SLUG_|_get_asset( 'logo.svg' ) . '" class="custom-logo"width="70" height="33">',
 			esc_attr( get_bloginfo( 'description' ) )
 		);
 		return $html;
